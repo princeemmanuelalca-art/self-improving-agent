@@ -1,14 +1,14 @@
-# 🤖 Self-Improving Coding Agent
+#  Self-Improving Coding Agent
 
 An autonomous coding agent that writes, executes, and debugs Python code using **Groq LLM** and **E2B Sandbox**.
 
 ## Features
 
-- 🔄 **Self-Improving Loop**: Automatically reflects on errors and rewrites code
-- ☁️ **Secure Execution**: Runs untrusted code in E2B cloud sandboxes
-- ⚡ **Fast Inference**: Uses Groq's Llama 3.3 70B (blazing fast tokens/sec)
-- 📝 **Full Logging**: Tracks every iteration, code attempt, and execution result
-- 🎯 **CLI Interface**: Simple command-line usage
+-  **Self-Improving Loop**: Automatically reflects on errors and rewrites code
+-  **Secure Execution**: Runs untrusted code in E2B cloud sandboxes
+-  **Fast Inference**: Uses Groq's Llama 3.3 70B (blazing fast tokens/sec)
+-  **Full Logging**: Tracks every iteration, code attempt, and execution result
+-  **CLI Interface**: Simple command-line usage
 
 ## Architecture
 
@@ -70,40 +70,40 @@ python agent.py --file task.txt
 ## Example Output
 
 ```
-🚀 Starting agent for task: Write a function to reverse a string...
-🤖 Model: llama-3.3-70b-versatile | Max iterations: 5
+ Starting agent for task: Write a function to reverse a string...
+ Model: llama-3.3-70b-versatile | Max iterations: 5
 
 ============================================================
-🔁 ITERATION 1/5
+ ITERATION 1/5
 ============================================================
-📝 CODE:
+ CODE:
 def reverse_string(s):
     return s[::-1]
 
 print(reverse_string("hello"))
 
-📤 STDOUT:
+ STDOUT:
 olleh
 
-🔢 Exit Code: None
-✅ Success: True
+ Exit Code: None
+ Success: True
 
-🎉 SUCCESS! Task completed in 1 iteration(s).
-💾 Solution saved to: solution_20240506_143022.py
+ SUCCESS! Task completed in 1 iteration(s).
+ Solution saved to: solution_20240506_143022.py
 ```
 
 ## Error Recovery Example
 
 ```
-🔁 ITERATION 1/5
-⚠️  STDERR: NameError: name 'pd' is not defined
+ ITERATION 1/5
+  STDERR: NameError: name 'pd' is not defined
 
-🔁 ITERATION 2/5
-📝 CODE:
+ ITERATION 2/5
+ CODE:
 import pandas as pd
 # ... corrected code
 
-🎉 SUCCESS! Task completed in 2 iteration(s).
+ SUCCESS! Task completed in 2 iteration(s).
 ```
 
 ## File Structure
